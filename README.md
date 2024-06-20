@@ -2,6 +2,7 @@
 small script to extract unique PValue data  
 
 # DATA EXAMPLE 
+```
 transcript_id;log2FC_pe_soltub;PValue_pe_soltub;FDR_pe_soltub;Inf_pe_soltub_Mean_TPM;Ctrl_pe_soltub_Mean_TPM;annotation
 Soltu.DM.01G000780.1;-2,52;0,001071851;0,005584416;0,57;5,29;Dynein light chain type 1 family protein
 Soltu.DM.12G025280.1;-1,08;0,011119733;0,037359114;2,18;7,63;golgin candidate
@@ -19,9 +20,9 @@ Soltu.DM.12G025640.1;3,74;0,000226565;0,001501631;4,14;0,57;myb domain protein
 Soltu.DM.01G001340.1;-1,54;0,000526622;0,003077218;2,79;13,57;MAK16 protein-related
 Soltu.DM.01G001340.2;-1,54;0,000526622;0,003077218;2,79;13,57;MAK16 protein-related
 Soltu.DM.01G001340.3;-1,54;0,000526622;0,003077218;2,79;13,57;MAK16 protein-related
-
+```
 # ACCEPED DATA EXAMPLE
-
+```
 ,transcript_id,log2FC_pe_soltub,PValue_pe_soltub,FDR_pe_soltub,Inf_pe_soltub_Mean_TPM,Ctrl_pe_soltub_Mean_TPM,annotation
 23,Soltu.DM.12G025560.1,"-4,14","0,000709194","0,00396254","0,61","19,77",Protein of unknown function (DUF1005)
 24,Soltu.DM.12G025600.1,"1,44","0,000191619","0,001300112","75,25","47,06",Insulinase (Peptidase family M16) protein
@@ -33,12 +34,13 @@ Soltu.DM.01G001340.3;-1,54;0,000526622;0,003077218;2,79;13,57;MAK16 protein-rela
 30,Soltu.DM.12G025650.1,"2,98","0,002920685","0,012819476","7,13","1,41",Mnd1 family protein
 44,Soltu.DM.01G001330.1,"1,1","0,012064263","0,039943978","2,12","1,79",calmodulin-binding family protein
 45,Soltu.DM.01G001340.1,"-1,54","0,000526622","0,003077218","2,79","13,57",MAK16 protein-related
-
+```
 
 # REJECTED DATA EXAMPLE
-
+```
 ,transcript_id,log2FC_pe_soltub,PValue_pe_soltub,FDR_pe_soltub,Inf_pe_soltub_Mean_TPM,Ctrl_pe_soltub_Mean_TPM,annotation
 4,Soltu.DM.01G000520.5,"-2,14","6,95855E-05","0,000540757","0,76","5,54",Ankyrin repeat family protein,"Duplicate PValue 6,95855E-05 for Gene ID: 01G000520"
 5,Soltu.DM.12G025620.5,"5,93","3,38327E-09","8,39918E-08","4,26","0,13",myo-inositol oxygenase,"Duplicate PValue 3,38327E-09 for Gene ID: 12G025620"
 6,Soltu.DM.01G001340.2,"-1,54","0,000526622","0,003077218","2,79","13,57",MAK16 protein-related,"Duplicate PValue 0,000526622 for Gene ID: 01G001340"
 7,Soltu.DM.01G001340.3,"-1,54","0,000526622","0,003077218","2,79","13,57",MAK16 protein-related,"Duplicate PValue 0,000526622 for Gene ID: 01G001340"
+```
