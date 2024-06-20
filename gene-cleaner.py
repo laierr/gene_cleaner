@@ -13,7 +13,7 @@ df['gene_id'] = df['transcript_id'].apply(lambda x: x.split('.')[2:-1][0])
 processed_data = []
 rejected_data = []
 
-# Track accepted transcript_ids by main id and PValue
+# Track accepted transcript_ids by gene_id and PValue
 accepted_ids = {}
 
 # BUCKLE UP! WE GOING IN!
@@ -27,10 +27,10 @@ for index, row in df.iterrows():
         # Reject that gene ID with that PValue been acceped erlier
         rejected_id = accepted_ids[(main_id, pvalue)]
         
-        #stating reasons to reject
+        # Reason why that row was rejected
         rejection_reason = f"Duplicate PValue {pvalue} for Gene ID: {main_id}"
         row['rejection_reason'] = rejection_reason
-        #saving rejected data, control
+        # Save rejected data separatly
         rejected_data.append(row.to_dict())
     else:
         # Accept this row and mark this main_id with this PValue as accepted
@@ -46,7 +46,7 @@ processed_df.drop(columns=['gene_id'], inplace=True)
 rejected_df.drop(columns=['gene_id'], inplace=True)
 
 
-#Saving results to file
+# Save results to a file
 rejected_df.to_csv('rejected_data.csv')
 processed_df.to_csv('cleaned_data.csv')
 
