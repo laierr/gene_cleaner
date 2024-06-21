@@ -3,7 +3,7 @@ import pandas as pd
 # SHOW ME THE PATH
 file_path = 'data/here_be_file.csv'
 
-df = pd.DataFrame(pd.read_csv(file_path, sep=';', on_bad_lines='warn'))
+df = pd.DataFrame(pd.read_csv(file_path, sep=';', decimal=',', on_bad_lines='warn'))
 
 # Extracting Gene ID
 # Soltu.DM.01G000790.1 ==> 01G000790
